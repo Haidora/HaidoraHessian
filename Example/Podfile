@@ -1,0 +1,8 @@
+target 'HaidoraHessian', :exclusive => true do
+  pod "HaidoraHessian", :path => "../"
+  pod "libObjCAttr", "~> 1.3.4"
+  post_install do |installer|
+      require File.expand_path('ROADConfigurator.rb', './Pods/libObjCAttr/libObjCAttr/Resources/')
+      ROADConfigurator::post_install(installer)
+  end
+end

@@ -1,0 +1,6 @@
+GCC_PREPROCESSOR_DEFINITIONS = $(inherited) COCOAPODS=1
+HEADER_SEARCH_PATHS = "${PODS_ROOT}/Headers/Public" "${PODS_ROOT}/Headers/Public/HaidoraHessian" "${PODS_ROOT}/Headers/Public/libObjCAttr" "${PODS_ROOT}/Headers/Public/libObjCAttr/ROAD"
+OTHER_CFLAGS = $(inherited) -isystem "${PODS_ROOT}/Headers/Public" -isystem "${PODS_ROOT}/Headers/Public/HaidoraHessian" -isystem "${PODS_ROOT}/Headers/Public/libObjCAttr" -isystem "${PODS_ROOT}/Headers/Public/libObjCAttr/ROAD"
+OTHER_LDFLAGS = -ObjC -l"Pods-HaidoraHessian-HaidoraHessian" -l"Pods-HaidoraHessian-libObjCAttr"
+OTHER_LIBTOOLFLAGS = $(OTHER_LDFLAGS)
+PODS_ROOT = ${SRCROOT}/Pods
