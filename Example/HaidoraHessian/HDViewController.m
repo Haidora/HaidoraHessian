@@ -7,7 +7,6 @@
 //
 
 #import "HDViewController.h"
-#import "HDServiceProvider+HDTest.h"
 
 @interface HDViewController ()
 
@@ -19,10 +18,6 @@
 {
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
-    for (NSInteger i = 0; i < 10; i++)
-    {
-        NSLog(@"%@", [[HDServiceProvider shareTestService] login:@"test13" password:@"1" imei:nil]);
-    }
 }
 
 - (void)didReceiveMemoryWarning

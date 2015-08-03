@@ -18,8 +18,6 @@
 		6003F5A4195388D20070C39A /* Main_iPad.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6003F5A2195388D20070C39A /* Main_iPad.storyboard */; };
 		6003F5A7195388D20070C39A /* HDViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6003F5A6195388D20070C39A /* HDViewController.m */; };
 		6003F5A9195388D20070C39A /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6003F5A8195388D20070C39A /* Images.xcassets */; };
-		ABA9883E1AD26E130060A819 /* HDServiceTest.m in Sources */ = {isa = PBXBuildFile; fileRef = ABA9883D1AD26E130060A819 /* HDServiceTest.m */; };
-		ABE7FBFF1AD2C60B000A0213 /* HDServiceProvider+HDTest.m in Sources */ = {isa = PBXBuildFile; fileRef = ABE7FBFE1AD2C60B000A0213 /* HDServiceProvider+HDTest.m */; };
 		E738DC908C7EFC9C2CCCF2B0 /* ROADGeneratedAttribute.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E0D89205A8735D4E4C86956 /* ROADGeneratedAttribute.m */; };
 /* End PBXBuildFile section */
 
@@ -46,10 +44,6 @@
 		7B8847A566B8C037BF5016C8 /* libPods-HaidoraHessian.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-HaidoraHessian.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		87A013825E4BBFCBF06B6EE9 /* libPods-Tests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Tests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		87C9A49AE5D3C627DF05DA3A /* Pods-HaidoraHessian.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HaidoraHessian.debug.xcconfig"; path = "Pods/Target Support Files/Pods-HaidoraHessian/Pods-HaidoraHessian.debug.xcconfig"; sourceTree = "<group>"; };
-		ABA9883C1AD26E130060A819 /* HDServiceTest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HDServiceTest.h; sourceTree = "<group>"; };
-		ABA9883D1AD26E130060A819 /* HDServiceTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HDServiceTest.m; sourceTree = "<group>"; };
-		ABE7FBFD1AD2C60B000A0213 /* HDServiceProvider+HDTest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "HDServiceProvider+HDTest.h"; sourceTree = "<group>"; };
-		ABE7FBFE1AD2C60B000A0213 /* HDServiceProvider+HDTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "HDServiceProvider+HDTest.m"; sourceTree = "<group>"; };
 		B8E4EC191B9B3AB4F80CCC79 /* Pods-Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Tests.release.xcconfig"; path = "Pods/Target Support Files/Pods-Tests/Pods-Tests.release.xcconfig"; sourceTree = "<group>"; };
 		C1C60AC8DE122EC24AD296CB /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
 		DD31C8D30C619EB692E290E1 /* Pods-Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Tests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Tests/Pods-Tests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -115,10 +109,6 @@
 				6003F5A6195388D20070C39A /* HDViewController.m */,
 				6003F5A8195388D20070C39A /* Images.xcassets */,
 				6003F594195388D20070C39A /* Supporting Files */,
-				ABA9883C1AD26E130060A819 /* HDServiceTest.h */,
-				ABA9883D1AD26E130060A819 /* HDServiceTest.m */,
-				ABE7FBFD1AD2C60B000A0213 /* HDServiceProvider+HDTest.h */,
-				ABE7FBFE1AD2C60B000A0213 /* HDServiceProvider+HDTest.m */,
 			);
 			path = HaidoraHessian;
 			sourceTree = "<group>";
@@ -274,9 +264,7 @@
 			files = (
 				6003F59E195388D20070C39A /* HDAppDelegate.m in Sources */,
 				6003F5A7195388D20070C39A /* HDViewController.m in Sources */,
-				ABA9883E1AD26E130060A819 /* HDServiceTest.m in Sources */,
 				6003F59A195388D20070C39A /* main.m in Sources */,
-				ABE7FBFF1AD2C60B000A0213 /* HDServiceProvider+HDTest.m in Sources */,
 				E738DC908C7EFC9C2CCCF2B0 /* ROADGeneratedAttribute.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
