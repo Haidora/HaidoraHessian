@@ -137,7 +137,9 @@ static NSMutableDictionary * gClassMapping;
 }
 
 + (void) setClassNameMapping:(NSDictionary *) aMappingDictionary {
-    gClassMapping = [aMappingDictionary mutableCopy];
+    if (aMappingDictionary){
+        [gClassMapping addEntriesFromDictionary:[aMappingDictionary mutableCopy]];
+    }
 }
 
 - (BOOL)allowsKeyedCoding {
