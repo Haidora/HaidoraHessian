@@ -1,16 +1,19 @@
 require 'xcodeproj'
 
 class ROADConfigurator
-    def self.post_install(installer_representation, config_path = './ROADConfigurator.yml')
+    def self.post_install(installer, config_path = './ROADConfigurator.yml')
         if File.exists?(config_path)
           @@config = YAML::load(File.open(config_path))
         end
 
-        ROADConfigurator::modify_user_project(installer_representation)
+        ROADConfigurator::modify_user_project(installer)
     end
 
-    def self.modify_user_project(installer_representation)
-        installer_representation.installer.analysis_result.targets.each do |target|
+    def self.modify_user_project(installer)
+        ROADConfigurator::remove_configurator_from_project(installer.pods_project)
+        ROADConfigurator::remove_generator_from_project(installer.pods_project)
+
+        installer.analysis_result.targets.each do |target|
 
             libObjCAttrPod = false
             target.pod_targets.each do |pod_target|
@@ -25,6 +28,7 @@ class ROADConfigurator
 
             if target.user_project_path.exist? && target.user_target_uuids.any?
                 user_project = Xcodeproj::Project.open(target.user_project_path)
+                user_project_dir = File.dirname(user_project.path)
 
                 user_targets = Array.new
                 target.user_target_uuids.each do |user_target_uuid|
@@ -32,7 +36,6 @@ class ROADConfigurator
                     if not user_target.nil?
                         user_targets.push(user_target)
 
-                        user_project_dir = File.dirname(user_project.path)
                         genereted_attributes_path = "#{user_project_dir}/#{user_target.name}/ROADGeneratedAttributes"
                         generated_attributes_file_path = ROADConfigurator::create_path_for_generated_attributes_file_for_folder_path(genereted_attributes_path)
 
@@ -141,4 +144,27 @@ class ROADConfigurator
         end
         project.save
     end
+
+    def self.remove_configurator_from_project(project)
+        path = project.path
+        pod_path = File.dirname(path)
+        configurator_path = "#{pod_path}/libObjCAttr/libObjCAttr/Resources/ROADConfigurator.rb"
+        reference_for_path = project.reference_for_path(configurator_path)
+        if !reference_for_path.nil?
+            reference_for_path.remove_from_project()
+        end
+        project.save;
+    end
+
+    def self.remove_generator_from_project(project)
+        path = project.path
+        pod_path = File.dirname(path)
+        generator_path = "#{pod_path}/libObjCAttr/tools/binaries/ROADAttributesCodeGenerator"
+        reference_for_path = project.reference_for_path(generator_path)
+        if !reference_for_path.nil?
+            reference_for_path.remove_from_project()
+        end
+        project.save;
+    end
+
 end

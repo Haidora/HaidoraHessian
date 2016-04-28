@@ -1,5 +1,0 @@
-#include "Pods-HaidoraHessian-HaidoraHessian.xcconfig"
-GCC_PREPROCESSOR_DEFINITIONS = $(inherited) COCOAPODS=1
-HEADER_SEARCH_PATHS = "${PODS_ROOT}/Headers/Build" "${PODS_ROOT}/Headers/Build/HaidoraHessian" "${PODS_ROOT}/Headers/Public" "${PODS_ROOT}/Headers/Public/HaidoraHessian" "${PODS_ROOT}/Headers/Public/libObjCAttr" "${PODS_ROOT}/Headers/Public/libObjCAttr/ROAD"
-OTHER_LDFLAGS = -ObjC
-PODS_ROOT = ${SRCROOT}

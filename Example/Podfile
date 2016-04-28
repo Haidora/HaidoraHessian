@@ -1,3 +1,6 @@
+source "https://github.com/CocoaPods/Specs.git"
+source "https://git.oschina.net/hulk/Pods.git"
+
 target 'HaidoraHessian', :exclusive => true do
   pod "HaidoraHessian", :path => "../"
   pod "libObjCAttr", "~> 1.3.4"

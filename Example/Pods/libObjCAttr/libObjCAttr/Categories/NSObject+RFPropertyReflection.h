@@ -46,6 +46,14 @@
 + (NSArray *)RF_properties;
 
 /**
+ * Returns an array of property info objects.
+ * @param depth The depth of superclasses where properties should be gathered. 
+ * 1 - only current class, 0 - always returns no properties.
+ * @result The info objects' array.
+ */
++ (NSArray *)RF_propertiesWithDepth:(NSUInteger)depth;
+
+/**
  * Returns a property info.
  * @param name The name of the property to fetch the info for.
  * @result The info object.
@@ -57,6 +65,14 @@
  * @result The info objects' array.
  */
 - (NSArray *)RF_properties;
+
+/**
+ * Returns an array of property info objects.
+ * @param depth The depth of superclasses where properties should be gathered. 
+ * 1 - only current class, 0 - always returns no properties. Invoked on an instance of a class.
+ * @result The info objects' array.
+ */
+- (NSArray *)RF_propertiesWithDepth:(NSUInteger)depth;
 
 /**
  * Returns a property info. Invoked on an instance of a class.

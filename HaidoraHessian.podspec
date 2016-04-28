@@ -21,4 +21,5 @@ Pod::Spec.new do |s|
   # s.public_header_files = 'Pod/Classes/**/*.h'
   s.frameworks = 'UIKit', 'Foundation'
   s.dependency 'libObjCAttr', '~> 1.3.4'
+  s.dependency 'HessianObjC', '~> 1.0'
 end
